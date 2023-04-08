@@ -1,0 +1,315 @@
+@font-face {
+    font-family: TCCEB;
+    src: url('../font/TCCEB.TTF');
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body {
+    font-family: TCCEB;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body,
+#root,
+.app {
+    height: 100%;
+}
+
+#root {
+    background-color: #fff;
+}
+
+.app {
+    display: flex;
+    flex-flow: column;
+}
+
+.header {
+    border-bottom: 4px solid #775FCA;
+    padding: .75rem 0;
+    text-align: center;
+}
+
+.header img {
+    width: 12rem;
+}
+
+.header .title {
+    color: #775FCA;
+    font-size: 1.75rem;
+}
+
+.container {
+    flex: 1 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    padding: 0 25%;
+    text-align: center;
+}
+
+.container .enter {
+    width: 12rem;
+    margin-top: 2rem;
+}
+
+.container .options {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.container .options img {
+    width: 10rem;
+}
+
+.container .options img:last-child {
+    margin-left: 1rem;
+}
+
+.container .form {
+    margin-top: 1.5rem;
+}
+
+.container .row {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.container .row label {
+    width: 11rem;
+    text-align: left;
+}
+
+.container .row input {
+    flex: 1 1;
+    border: 2px solid #000;
+    font-size: 1.25rem;
+    padding: 4px;
+}
+
+.container .row input:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.container .row .max {
+    border: 2px solid #000;
+    padding: 4px;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.container .lock {
+    width: 10rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.container .withdraw {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.container .withdraw .row {
+    display: flex;
+    align-items: center;
+}
+
+.container .withdraw .row .name {
+    width: 16rem;
+    text-align: left;
+}
+
+.container .withdraw .row .amount {
+    margin: 0 1rem;
+    width: 16rem;
+    text-align: left;
+}
+
+.container .withdraw .row .go {
+    width: 6.5rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: .25rem 0;
+    font-size: 1.5rem;
+}
+
+.footer a:last-child {
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 810px) {
+    .container {
+        padding: 0 20%;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .container {
+        padding: 0 15%;
+    }
+    .container .row label {
+        width: 8rem;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .container .row .max {
+        margin-left: .5rem;
+        font-size: 1rem;
+    }
+    .container .row input {
+        width: 11rem;
+    }
+    .container .withdraw .row {
+        font-size: 1.2rem;
+    }
+    .container .withdraw .row .name {
+        width: 6.5rem;
+    }
+    .container .withdraw .row .amount {
+        width: 8rem;
+    }
+    .container .withdraw .row .go {
+        width: 5.5rem;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .container .row input {
+        width: 9rem;
+    }
+}
+
+/* Datepicker */
+
+input:focus {
+    outline: none;
+}
+
+#ui-datepicker-div {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin-top: 0.25rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.ui-datepicker-calendar thead th {
+    padding: 0.25rem 0;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #78909C;
+}
+
+.ui-datepicker-calendar tbody td {
+    width: 2.5rem;
+    text-align: center;
+    padding: 0;
+}
+
+.ui-datepicker-calendar tbody td a {
+    display: block;
+    border-radius: 0.25rem;
+    line-height: 2rem;
+    transition: 0.3s all;
+    color: #546E7A;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.ui-datepicker-calendar tbody td a:hover {
+    background-color: #E0F2F1;
+}
+
+.ui-datepicker-calendar tbody td a.ui-state-active {
+    background-color: #009688;
+    color: white;
+}
+
+.ui-datepicker-header a.ui-corner-all {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    border-radius: 0.25rem;
+    transition: 0.3s all;
+}
+
+.ui-datepicker-header a.ui-corner-all:hover {
+    background-color: #ECEFF1;
+}
+
+.ui-datepicker-header a.ui-datepicker-prev {
+    left: 0;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-size: 0.5rem;
+    background-position: 50%;
+    transform: rotate(180deg);
+}
+
+.ui-datepicker-header a.ui-datepicker-next {
+    right: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 50%;
+}
+
+.ui-datepicker-header a>span {
+    display: none;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+}
+
+.ui-datepicker-week-col {
+    color: #78909C;
+    font-weight: 400;
+    font-size: 0.75rem;
+}
